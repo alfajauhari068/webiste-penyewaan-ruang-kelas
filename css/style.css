@@ -10,6 +10,18 @@ body{
     background-color:var(--primary);
 }
 
+.container#wrapper{
+    background-color: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.108);
+    width: 95%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -86,7 +98,7 @@ body{
     transition: .5s;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 60px;
 }
@@ -102,14 +114,15 @@ body{
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #0992f3;
+    /* color: var(--primary); */
 }
 
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: 1000;
     vertical-align: middle;
     margin-left: 8px;
 }
@@ -121,12 +134,27 @@ body{
     }
 
     .navbar .navbar-nav {
-        margin-top: 15px;
+        background-color: #0992f3be;
+        padding: 20px;
+        margin-top: 40px;
+        border-radius: 10px;
         border-top: 1px solid #EEEEEE;
     }
+
+    .navbar .navbar-nav .nav-link.active {
+        color: var(--light);
+    }
+
+    .navbar .dropdown-menu {
+            background-color: var(--bs-light) !important;
+
+        }
+
+   
 }
 
 @media (min-width: 992px) {
+    
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
@@ -150,12 +178,37 @@ body{
 }
 
 .modal-content {
+    background-image: url('../img/img/bg-wa.jpg'); /* pastikan path sesuai */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* opsional, agar teks tetap terlihat jika gambar gelap */
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  /* Lapisan semi-transparan jika perlu efek gelap */
+  .modal-content::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* efek gelap */
+    z-index: 1;
+  }
+
+  .modal-body, .modal-header, .tabs-listing, .form-group {
+    position: relative;
+    z-index: 2;
+  }
+
+.modal-content {
   border-radius: 1rem;
   box-shadow: 15px 10px 25px rgb(0, 0, 0);
 }
 
 .modal-body {
-    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    /* background: linear-gradient(to bottom right, #f8f9fa, #e9ecef); */
     border-radius: 0 0 1rem 1rem;
   }
 
@@ -273,11 +326,11 @@ body{
   background-color: #f9fdff;
   padding: 0px;
   border-radius: 10px;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.243);
-  width: 95%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.237);
+  width: 100%;
   max-width: 1350px; /* Batasi lebar maksimum agar tidak terlalu melebar */
   margin: 0px auto;
-  border-top:#0492ff 5px solid;
+  /* border-top:#0492ff 5px solid; */
 }
 
 .search-section * {
@@ -349,6 +402,7 @@ body{
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), 
             url(../img/img/fasilitas-1.jpeg) left center no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 
 .btn-play {
@@ -500,7 +554,7 @@ body{
 /*** Project ***/
 .project-item {
     width: 100%;
-    height: 250px; /* atau sesuaikan sesuai kebutuhan */
+    height: 450px; /* atau sesuaikan sesuai kebutuhan */
     object-fit: cover;
     border-radius: 10px; /* opsional agar sudutnya membulat */
 }
@@ -518,6 +572,11 @@ body{
     opacity: 0;
     padding-top: 60px;
     transition: .5s;
+}
+
+.project-item img{
+    width: 100%;
+    height: 350px;
 }
 
 .project-item:hover .project-overlay {
@@ -642,82 +701,21 @@ body{
 }
 
 
-/*** Testimonial ***/
-.testimonial-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
-    transition: .5s;
-}
 
-.owl-item .testimonial-item,
-.testimonial-item * {
-    transition: .5s;
-}
 
-.owl-item.center .testimonial-item,
-.testimonial-item:hover {
-    background: var(--primary);
-}
-
-.owl-item.center .testimonial-item *,
-.testimonial-item:hover * {
-    color: #FFFFFF !important;
-}
-
-.testimonial-item img {
-    width: 100px !important;
-    height: 100px !important;
-    border-radius: 100px;
-}
-
-.testimonial-carousel .owl-nav {
-    position: absolute;
-    top: -100px;
-    right: 0;
-    display: flex;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    margin-left: 15px;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary);
-    border-radius: 55px;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .15);
-    font-size: 25px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    color: #FFFFFF;
-}
-
-@media (max-width: 768px) {
-    .testimonial-carousel .owl-nav {
-        top: -70px;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+    /* Kalender prasarana */
+    
+    #calendar {
+        max-width: 1200px;
+        background-color: red;
+        border-radius: 10px;
     }
 
-    .testimonial-carousel .owl-nav .owl-prev,
-    .testimonial-carousel .owl-nav .owl-next {
-        margin: 0 7px;
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-    }
-}
+    /* Kalender prasarana */
 
 
 /*** Footer ***/
 .footer {
-    background-image: src:"img\img\Gedung 1 UBHI-thumbnail.jpg";
     color: #B0B9AE;
 }
 

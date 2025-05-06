@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GrowMark - Digital Marketing HTML Template</title>
+    <title>UBHI-Booking Room Website</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -32,6 +32,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    
 </head>
 
 <body class="body">
@@ -93,7 +95,7 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
-        <div class="container">
+        <div id="nav" class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-sm">
                 <a href="index.html" class="navbar-brand d-lg-none">
                     <h1 class="fw-bold m-0">Univ-Bhinneka-PGRI</h1>
@@ -105,19 +107,18 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Activity</a>
+                        <a href="KalenderPrasarana.html" class="nav-item nav-link">Kalender Prasarana</a>
+                        <a href="project.html" class="nav-item nav-link">Perkuliahan</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu bg-light rounded-3 rounded-bottom m-0">
                                 <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="quote.html" class="dropdown-item">Quotation</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
@@ -145,9 +146,7 @@
                             <button class="btn btn-outline-primary text-uppercase me-3 active" id="nav-sign-in-tab"
                               data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button" role="tab"
                               aria-controls="nav-sign-in" aria-selected="true">Log In</button>
-                            <button class="btn btn-outline-primary text-uppercase" id="nav-register-tab"
-                              data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab"
-                              aria-controls="nav-register" aria-selected="false">Sign Up</button>
+                            
                           </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
@@ -156,9 +155,9 @@
                             <form id="form1" class="form-group flex-wrap p-3 ">
                               <div class="form-input col-lg-12 my-4">
                                 <label for="exampleInputEmail1"
-                                  class="form-label fs-6 text-uppercase fw-bold text-black">Email
-                                  Address</label>
-                                <input type="text" id="exampleInputEmail1" name="email" placeholder="Email"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black">Username
+                                </label>
+                                <input type="text" id="exampleInputEmail1" name="email" placeholder="Username"
                                   class="form-control ps-3">
                               </div>
                               <div class="form-input col-lg-12 my-4">
@@ -272,7 +271,8 @@
     <!-- Carousel End -->
 
     <!-- Section: Pencarian Ruangan -->
-    <div id="roomSearch" class="search-section  my-5 mx-auto">
+     <div id="wrapper" class="container">
+        <div id="roomSearch" class="search-section  my-3 mx-auto">
             <div class="">
             <label for="searchMode" id="search"><i><img src="img\icon\images.png" alt="" width="40px" ></i>Perkuliahan</label>
             
@@ -305,11 +305,14 @@
             </div>
           </div>
           </div>
+     </div>
+    
           <!-- End-Section: Pencarian Ruangan -->
 
           <!-- Time-Line -->
           <!-- Wrapper timeline -->
-        <div class="timeline-wrapper mt-5 mx-5">
+        <div id="wrapper" class="container mt-5">
+            <div class="timeline-wrapper mt-5 mx-5">
         <div class="timeline-scroll" id="timelineScroll">
             <div class="timeline">
             
@@ -366,14 +369,16 @@
             </div>
         </div>
         </div>
+        </div>
+        
 
  
         <!-- Quote Start -->
     <div class="container-xxl py-5">
-    <div class="container">
+    <div id="wrapper" class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p class="fs-5 fw-medium text-primary">Ajukan Pemakaian</p>
+                <p id="quot-start" class="fs-5 fw-medium text-primary">Ajukan Pemakaian</p>
                 <h1 class="display-5 mb-4">Butuh Ruangan untuk Kegiatan Kampus?</h1>
                 <p>Silakan ajukan permintaan pemakaian ruangan kampus seperti kelas, laboratorium, auditorium, atau ruang serbaguna untuk mendukung kegiatan akademik dan organisasi Anda.</p>
                 <p class="mb-4">Tim kami akan segera menindaklanjuti dan memastikan ruangan tersedia sesuai kebutuhan Anda.</p>
@@ -386,64 +391,99 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <h2 class="mb-4">Formulir Permohonan Ruangan</h2>
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
-                            <label for="name">Nama Lengkap</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="waForm" placeholder="WA">
-                            <label for="WA">Wa +62</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
-                            <label for="unit">Unit/Organisasi</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <select class="form-select" id="ruang">
-                                <option selected disabled>Pilih Jenis Ruangan</option>
-                                <option value="kelas">Kelas</option>
-                                <option value="lab">Laboratorium</option>
-                                <option value="aula">Auditorium</option>
-                                <option value="serbaguna">Ruang Serbaguna</option>
-                            </select>
-                            <label for="ruang">Jenis Ruangan</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
-                            <label for="tanggal">Tanggal Kegiatan</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="time" class="form-control" id="waktu" placeholder="Waktu">
-                            <label for="waktu">Waktu Mulai</label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
-                            <label for="message">Deskripsi Kegiatan</label>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
-
-                            </div>
+                            <form id="formWa">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                                            <label for="name">Nama Lengkap</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="waForm" placeholder="WA">
+                                            <label for="waForm">WA +62</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
+                                            <label for="unit">Unit/Organisasi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="ruang">
+                                                <option selected disabled>Pilih Jenis Ruangan</option>
+                                                <option value="kelas">Kelas</option>
+                                                <option value="lab">Laboratorium</option>
+                                                <option value="aula">Auditorium</option>
+                                                <option value="serbaguna">Ruang Serbaguna</option>
+                                            </select>
+                                            <label for="ruang">Jenis Ruangan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
+                                            <label for="tanggal">Tanggal Kegiatan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="time" class="form-control" id="waktu" placeholder="Waktu">
+                                            <label for="waktu">Waktu Mulai</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
+                                            <label for="message">Deskripsi Kegiatan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
+                                    </div>
+                                </div>
+                            </form>
+                
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+    function kirimWA() {
+    console.log("Fungsi kirimWA dijalankan");
+
+    var nama = document.getElementById("name").value.trim();
+    var waForm = document.getElementById("waForm").value.trim();
+    var unit = document.getElementById("unit").value.trim();
+    var ruang = document.getElementById("ruang").value;
+    var tanggal = document.getElementById("tanggal").value;
+    var waktu = document.getElementById("waktu").value;
+    var message = document.getElementById("message").value.trim();
+
+    if (!nama || !waForm || !unit || !ruang || !tanggal || !waktu || !message) {
+        alert("Mohon lengkapi semua data terlebih dahulu.");
+        return;
+    }
+
+    var adminWA = "6281553675279";
+    var pesan = `Halo Admin, saya ingin mengajukan pemakaian ruangan kampus.\n\n` +
+                `*Nama:* ${nama}\n` +
+                `*WA:* ${waForm}\n` +
+                `*Unit/Organisasi:* ${unit}\n` +
+                `*Jenis Ruangan:* ${ruang}\n` +
+                `*Tanggal:* ${tanggal}\n` +
+                `*Waktu:* ${waktu}\n` +
+                `*Deskripsi:* ${message}`;
+
+    var url = `https://wa.me/${adminWA}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, '_blank');
+}
+        </script>
 
     <!-- Quote Start -->
 
@@ -451,7 +491,7 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl about my-5">
+    <div class="container-xxl about mb-5">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-6">
@@ -536,8 +576,8 @@
 
 
     <!-- Service Start -->
-<section id="Service" class="py-5 bg-light">
-  <div class="container">
+<section id="Service" class=" ">
+  <div id="wrapper" class="container">
     <div class="text-center mb-5">
       <h2 class="fw-bold">Our Services</h2>
       <p class="text-muted">Layanan utama untuk mendukung pemanfaatan ruang dan sarana prasarana kampus secara efisien</p>
@@ -590,7 +630,7 @@
 
     <!-- Project Start -->
    <div class="container-xxl pt-5">
-    <div class="container">
+    <div id="wrapper" class="container">
         <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-medium text-primary">Our Projects</p>
             <h1 class="display-5 mb-5">Kegiatan yang Telah Memanfaatkan Ruang Kampus</h1>
@@ -669,7 +709,7 @@
 
     <!-- Team Start -->
     <div class="container-xxl py-5">
-    <div class="container">
+    <div id="wrapper" class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <p class="fs-5 fw-medium text-primary">Tim Pengelola</p>
             <h1 class="display-5 mb-5">Kami Siap Membantu Pengelolaan Ruang Kampus</h1>
@@ -711,8 +751,8 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl pt-5">
-    <div class="container">
+    <!-- <div class="container-xxl pt-">
+    <div id="wrapper" class="container">
         <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-medium text-primary">Testimoni</p>
             <h1 class="display-5 mb-5">Apa Kata Pengguna Tentang Layanan Kami?</h1>
@@ -744,14 +784,14 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
     <!-- Testimonial End -->
 
 
     <!-- Footer Start -->
    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
+    <div id="foot-body" class="container py-5">
         <div class="row g-5">
             <!-- Info Kampus -->
             <div class="col-lg-3 col-md-6">
@@ -768,11 +808,11 @@
             <!-- Link Navigasi -->
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Tautan Cepat</h4>
-                <a class="btn btn-link" href="#">Tentang Kami</a>
-                <a class="btn btn-link" href="#">Daftar Ruangan</a>
-                <a class="btn btn-link" href="#">Cara Pemesanan</a>
-                <a class="btn btn-link" href="#">Kontak</a>
-                <a class="btn btn-link" href="#">FAQ</a>
+                <a class="btn btn-link" href="about.html">Tentang Kami</a>
+                <a class="btn btn-link" href="#roomSearch">Daftar Ruangan</a>
+                <a class="btn btn-link" href="#quot-start">Cara Pemesanan</a>
+                <a class="btn btn-link" href="project.html">Kontak</a>
+                <a class="btn btn-link" href="contact.html">FAQ</a>
             </div>
             <!-- Jam Operasional -->
             <div class="col-lg-3 col-md-6">
@@ -839,7 +879,8 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <!-- Script -->
+     <script src="/js/main.js"></script>
 </body>
 
 </html>

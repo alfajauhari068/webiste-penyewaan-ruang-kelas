@@ -135,35 +135,12 @@
 
   // Javascript from-Wa
 
-  function kirimWA() {
-    const nama = document.getElementById("name").value;
-    const waForm = document.getElementById("waForm").value;
-    const unit = document.getElementById("unit").value;
-    const ruang = document.getElementById("ruang").value;
-    const tanggal = document.getElementById("tanggal").value;
-    const waktu = document.getElementById("waktu").value;
-    const message = document.getElementById("message").value;
 
-    // Validasi dasar
-    if (!nama || !waForm || !unit || !ruang || !tanggal || !waktu || !message) {
-        alert("Mohon lengkapi semua data terlebih dahulu.");
-        return;
-    }
 
-    const adminWA = "6281553675279"; // tanpa plus
-    const pesan = `Halo Admin, saya ingin mengajukan pemakaian ruangan kampus.\n\n` +
-              `*Nama:* ${nama}\n` +
-              `*WA:* ${waForm}\n` +
-              `*Unit/Organisasi:* ${unit}\n` +
-              `*Jenis Ruangan:* ${ruang}\n` +
-              `*Tanggal:* ${tanggal}\n` +
-              `*Waktu:* ${waktu}\n` +
-              `*Deskripsi:* ${message}`;
-
-    const url = `https://wa.me/${adminWA}?text=${encodeURIComponent(pesan)}`;
-    window.open(url, '_blank');
-}
 
     
 })(jQuery);
+
+  // JavaScript Kalender
+  
 

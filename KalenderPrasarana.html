@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GrowMark - Digital Marketing HTML Template</title>
+    <title>UBHI-Booking Room Website</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -32,6 +32,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- js-year-calender -->
+     <link rel="stylesheet" href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css">
 </head>
 
 <body>
@@ -103,23 +106,25 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Activity</a>
+                        <a href="KalenderPrasarana.html" class="nav-item nav-link active">Kalender Prasarana</a>
+                        <a href="project.html" class="nav-item nav-link">Perkuliahan</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu bg-light rounded-3 rounded-bottom m-0">
                                 <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="quote.html" class="dropdown-item">Quotation</a>
-                                <a href="404.html" class="dropdown-item active">404 Page</a>
+                                
                             </div>
                         </div>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
+                       <button class="btn btn-outline-primary rounded-pill px-4 py-2 me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="bi bi-box-arrow-in-right me-2"></i> Login
+                       </button>
                     </div>
                 </div>
             </nav>
@@ -169,22 +174,31 @@
     <!-- Page Header End -->
 
 
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to
-                        our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
-                </div>
-            </div>
-        </div>
+    
+    <!-- Kalender -->
+    <div id="wrapper" class="container">
+        <h2 id="tgl" class="text-center my-4">kalender Penggunaan Sarana dan Prasarana Kampus</h2>
+        <div id="calendar" class="p-5 m-5"></div>
     </div>
-    <!-- 404 End -->
+    
+
+
+    <!-- Kalender -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+
+      // Tambahkan event saat tanggal diklik
+      dateClick: function(info) {
+        alert('Fitur belum tersedia. Silakan kembali nanti!');
+      }
+    });
+    calendar.render();
+  });
+    </script>
 
 
     <!-- Footer Start -->
@@ -209,11 +223,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="about.html">Tentang Kami</a>
+                    <a class="btn btn-link" href="#roomSearch">Daftar Ruangan</a>
+                    <a class="btn btn-link" href="#quot-start">Cara Pemesanan</a>
+                    <a class="btn btn-link" href="project.html">Kontak</a>
+                    <a class="btn btn-link" href="contact.html">FAQ</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Business Hours</h4>
@@ -263,6 +277,10 @@
             class="bi bi-arrow-up"></i></a>
 
 
+    
+
+
+
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -271,6 +289,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib\fullcalendar-6.1.17\dist\index.global.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
