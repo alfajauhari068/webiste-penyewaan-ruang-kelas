@@ -91,7 +91,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">GrowMark</h1>
+                    <h1 class="fw-bold m-0">Univ-Bhinneka-PGRI</h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -114,9 +114,12 @@
                         <a href="contact.html" class="nav-item nav-link active">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                       <button class="btn btn-outline-primary rounded-pill px-4 py-2 me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <i class="bi bi-box-arrow-in-right me-2"></i> Login
-                       </button>
+                        <button class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 35px; height: 35px;"
+                                data-bs-toggle="modal"
+                                data-bs-target="#profileModal">
+                            <i class="fa fa-user"></i>
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -165,7 +168,34 @@
     </div>
 </div>
     <!-- Page Header End -->
-
+     
+     <!-- Modal Profile Start -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="profileModalLabel">
+          <i class="fa fa-user-circle me-2"></i> Profil Pengguna
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-3">
+          <img src="img/img/me.jpg" alt="Foto Profil" class="rounded-circle mb-2" style="width: 64px; height: 64px;">
+          <h5 class="mb-0">ALFA JAUHARI</h5>
+          <small class="text-muted">user@example.com</small>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="fa fa-user me-2 text-secondary"></i> NPM: 23161562003</li>
+          <li class="list-group-item"><i class="fa fa-envelope me-2 text-secondary"></i> Email: user@example.com</li>
+          <li class="list-group-item"><i class="fa fa-phone me-2 text-secondary"></i> No HP: +62 815-5367-5279</li>
+          <li class="list-group-item"><i class="fa fa-calendar-alt me-2 text-secondary"></i> Bergabung: 1 Jan 2024</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Profile End -->
 
     <!-- Contact Start -->
     <div class="container-xxl py-5">
@@ -178,37 +208,49 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-4">Need a functional contact form?</h3>
                     <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+                    <form onsubmit="sendToWhatsApp(); return false;">
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="name" placeholder="Nama Anda" required>
+        <label for="name">Name</label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="phone" placeholder="Nomor WhatsApp Anda" required>
+        <label for="phone">Phone</label>
+      </div>
+    </div>
+    
+    <div class="col-12">
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Tulis pesan di sini" id="message" style="height: 200px" required></textarea>
+        <label for="message">Your Message</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-success rounded-pill py-3 px-5" type="submit">Kirim via WhatsApp</button>
+    </div>
+  </div>
+</form>
+
+<script>
+  function sendToWhatsApp() {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    // Ganti nomor tujuan di bawah dengan nomor WhatsApp tujuan (tanpa + atau spasi)
+    const tujuan = "6281553675279";
+
+    const fullMessage = `Halo, saya ${name} (%0AWhatsApp: ${phone}) Ingin menghubungi Anda:%0A%0A${message}`;
+
+    const whatsappURL = `https://wa.me/${tujuan}?text=${fullMessage}`;
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <h3 class="mb-4">Contact Details</h3>
