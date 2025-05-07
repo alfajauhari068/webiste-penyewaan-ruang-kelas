@@ -295,64 +295,99 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <h2 class="mb-4">Formulir Permohonan Ruangan</h2>
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
-                            <label for="name">Nama Lengkap</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="waForm" placeholder="WA">
-                            <label for="WA">Wa +62</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
-                            <label for="unit">Unit/Organisasi</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <select class="form-select" id="ruang">
-                                <option selected disabled>Pilih Jenis Ruangan</option>
-                                <option value="kelas">Kelas</option>
-                                <option value="lab">Laboratorium</option>
-                                <option value="aula">Auditorium</option>
-                                <option value="serbaguna">Ruang Serbaguna</option>
-                            </select>
-                            <label for="ruang">Jenis Ruangan</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
-                            <label for="tanggal">Tanggal Kegiatan</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating">
-                            <input type="time" class="form-control" id="waktu" placeholder="Waktu">
-                            <label for="waktu">Waktu Mulai</label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
-                            <label for="message">Deskripsi Kegiatan</label>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
-
-                            </div>
+                            <form id="formWa">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                                            <label for="name">Nama Lengkap</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="waForm" placeholder="WA">
+                                            <label for="waForm">WA +62</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
+                                            <label for="unit">Unit/Organisasi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="ruang">
+                                                <option selected disabled>Pilih Jenis Ruangan</option>
+                                                <option value="kelas">Kelas</option>
+                                                <option value="lab">Laboratorium</option>
+                                                <option value="aula">Auditorium</option>
+                                                <option value="serbaguna">Ruang Serbaguna</option>
+                                            </select>
+                                            <label for="ruang">Jenis Ruangan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
+                                            <label for="tanggal">Tanggal Kegiatan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="time" class="form-control" id="waktu" placeholder="Waktu">
+                                            <label for="waktu">Waktu Mulai</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
+                                            <label for="message">Deskripsi Kegiatan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
+                                    </div>
+                                </div>
+                            </form>
+                
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+
+        <script>
+    function kirimWA() {
+    console.log("Fungsi kirimWA dijalankan");
+
+    var nama = document.getElementById("name").value.trim();
+    var waForm = document.getElementById("waForm").value.trim();
+    var unit = document.getElementById("unit").value.trim();
+    var ruang = document.getElementById("ruang").value;
+    var tanggal = document.getElementById("tanggal").value;
+    var waktu = document.getElementById("waktu").value;
+    var message = document.getElementById("message").value.trim();
+
+    if (!nama || !waForm || !unit || !ruang || !tanggal || !waktu || !message) {
+        alert("Mohon lengkapi semua data terlebih dahulu.");
+        return;
+    }
+
+    var adminWA = "6281553675279";
+    var pesan = `Halo Admin, saya ingin mengajukan pemakaian ruangan kampus.\n\n` +
+                `*Nama:* ${nama}\n` +
+                `*WA:* ${waForm}\n` +
+                `*Unit/Organisasi:* ${unit}\n` +
+                `*Jenis Ruangan:* ${ruang}\n` +
+                `*Tanggal:* ${tanggal}\n` +
+                `*Waktu:* ${waktu}\n` +
+                `*Deskripsi:* ${message}`;
+
+    var url = `https://wa.me/${adminWA}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, '_blank');
+}
+        </script>
 
     <!-- Ajukan Pemakaian -->
     <!-- Project Start -->
