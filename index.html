@@ -154,32 +154,37 @@
                             aria-labelledby="nav-sign-in-tab">
                             <form id="form1" class="form-group flex-wrap p-3 ">
                               <div class="form-input col-lg-12 my-4">
-                                <label for="exampleInputEmail1"
-                                  class="form-label fs-6 text-uppercase fw-bold text-black">Username
-                                </label>
-                                <input type="text" id="exampleInputEmail1" name="email" placeholder="Username"
-                                  class="form-control ps-3">
-                              </div>
-                              <div class="form-input col-lg-12 my-4">
-                                <label for="inputPassword1"
-                                  class="form-label  fs-6 text-uppercase fw-bold text-black">Password</label>
-                                <input type="password" id="inputPassword1" placeholder="Password"
-                                  class="form-control ps-3" aria-describedby="passwordHelpBlock">
-                                <div id="passwordHelpBlock" class="form-text text-center">
-                                  <a href="#" class=" password">Forgot Password ?</a>
+                                
+                                <div class="input-group-custom">
+                                    <div class="input-icon">
+                                    <i class="fa fa-user text-dark"></i>
+                                    </div>
+                                    <input type="text" name="username" class="form-control" placeholder="Username" />
                                 </div>
 
-                              </div>
-                              <label class="py-3">
-                                <input type="checkbox" required="" class="d-inline">
-                                <span class="label-body text-black">Remember Me</span>
-                              </label>
-                              <div class="d-grid my-3">
-                                <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Log
-                                  In</button>
-                              </div>
-                            </form>
-                          </div>
+                                <!-- Password -->
+                                
+                                <div class="input-group-custom">
+                                    <div class="input-icon">
+                                    <i class="fa fa-lock text-dark"></i>
+                                    </div>
+                                    <input type="password" name="password" class="form-control" placeholder="Password" />
+                                </div>
+
+                                <div class="text-center mb-3">
+                                    <a href="#" class="text-decoration-none text-primary">Forgot Password?</a>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                                </div>
+
+                                </form>
+                            </div>
+                            </div>
+
+                             
                           <div class="tab-pane fade" id="nav-register" role="tabpanel"
                             aria-labelledby="nav-register-tab">
                             <form id="form2" class="form-group flex-wrap p-3 ">
@@ -708,44 +713,40 @@
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
-    <div id="wrapper" class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <p class="fs-5 fw-medium text-primary">Tim Pengelola</p>
-            <h1 class="display-5 mb-5">Kami Siap Membantu Pengelolaan Ruang Kampus</h1>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="img/team-1.jpg" alt="Kepala Sarpras">
-                    <h5>Ir. Dwi Handayani</h5>
-                    <span class="text-primary">Kepala Bagian Sarana & Prasarana</span>
+        <div class="container-xxl py-5 bg-light rounded">
+            <div id="wrapper" class="container">
+                <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                    <p class="fs-5 fw-medium text-primary">Struktur Pengelola</p>
+                    <h1 class="display-6 fw-bold">Kami Siap Membantu Pengelolaan Ruang Kampus</h1>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="img/team-2.jpg" alt="Admin">
-                    <h5>Rina Kartika</h5>
-                    <span class="text-primary">Staf Administrasi Pemakaian Ruang</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="img/team-3.jpg" alt="Teknisi">
-                    <h5>Ahmad Maulana</h5>
-                    <span class="text-primary">Teknisi Lapangan</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item rounded overflow-hidden pb-4">
-                    <img class="img-fluid mb-4" src="img/team-4.jpg" alt="Koordinator">
-                    <h5>Dr. Lestari Putri</h5>
-                    <span class="text-primary">Koordinator Akademik & Kegiatan Mahasiswa</span>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-white p-4 rounded shadow-sm h-100 text-center border-start border-4 border-primary">
+                            <h5 class="fw-bold mb-1">Ir. Dwi Handayani</h5>
+                            <p class="text-muted mb-0">Kepala Bagian Sarana & Prasarana</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-white p-4 rounded shadow-sm h-100 text-center border-start border-4 border-info">
+                            <h5 class="fw-bold mb-1">Rina Kartika</h5>
+                            <p class="text-muted mb-0">Staf Administrasi Pemakaian Ruang</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-white p-4 rounded shadow-sm h-100 text-center border-start border-4 border-success">
+                            <h5 class="fw-bold mb-1">Ahmad Maulana</h5>
+                            <p class="text-muted mb-0">Teknisi Lapangan</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-white p-4 rounded shadow-sm h-100 text-center border-start border-4 border-warning">
+                            <h5 class="fw-bold mb-1">Dr. Lestari Putri</h5>
+                            <p class="text-muted mb-0">Koordinator Akademik & Kegiatan Mahasiswa</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
     <!-- Team End -->
 
