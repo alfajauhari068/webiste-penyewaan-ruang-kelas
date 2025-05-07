@@ -108,7 +108,7 @@ body{
     padding: 25px 0;
     color: var(--dark);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 200;
     outline: none;
 }
 
@@ -128,31 +128,56 @@ body{
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
+    .navbar .navbar-nav {
+        background: rgba(9, 146, 243, 0.333); /* semi-transparent blue */
+        backdrop-filter: blur(10px); /* glass effect */
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease-in-out;
     }
 
-    .navbar .navbar-nav {
-        background-color: #0992f3be;
-        padding: 20px;
-        margin-top: 40px;
-        border-radius: 10px;
-        border-top: 1px solid #EEEEEE;
+    .navbar .navbar-nav .nav-link {
+        margin: 8px 0;
+        padding: 12px 16px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: white;
+        border-radius: 8px;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
     }
 
     .navbar .navbar-nav .nav-link.active {
-        color: var(--light);
+        background-color: #fff;
+        color: #0992f3;
     }
 
     .navbar .dropdown-menu {
-            background-color: var(--bs-light) !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
 
-        }
+    .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+        color: white;
+    }
 
-   
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
 }
-
 @media (min-width: 992px) {
     
     .navbar .nav-item .dropdown-menu {
@@ -172,6 +197,7 @@ body{
         opacity: 1;
     }
 }
+
 
 #exampleModal{
  background-color: #0554ff58;
