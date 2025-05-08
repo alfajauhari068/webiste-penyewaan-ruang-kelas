@@ -95,43 +95,54 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
-        <div id="nav" class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-sm">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">Univ-Bhinneka-PGRI</h1>
-                </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="KalenderPrasarana.html" class="nav-item nav-link">Kalender Prasarana</a>
-                        <a href="project.html" class="nav-item nav-link">Perkuliahan</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light rounded-3 rounded-bottom m-0">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="quote.html" class="dropdown-item">Quotation</a>
+        <div  class="container">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light p-2">
+    <!-- Logo terlihat di layar kecil -->
+    <a href="index.html" class="navbar-brand d-lg-none">
+        <h1 class="fw-bold m-0">Univ-Bhinneka-PGRI</h1>
+    </a>
+
+    <!-- Toggler -->
+    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"> <!-- pastikan ini cocok -->
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+                        <div class="collapse navbar-collapse" id="navbarNav"> <!-- pastikan id cocok dengan data-bs-target -->
+
+                            <!-- Nav Items -->
+                            <div class="navbar-nav">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="KalenderPrasarana.html" class="nav-item nav-link">Kalender Prasarana</a>
+                                <a href="project.html" class="nav-item nav-link">Perkuliahan</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                    <div class="dropdown-menu bg-light rounded-3 rounded-bottom m-0">
+                                        <a href="feature.html" class="dropdown-item">Features</a>
+                                        <a href="team.html" class="dropdown-item">Our Team</a>
+                                        <a href="quote.html" class="dropdown-item">Quotation</a>
+                                    </div>
+                                </div>
+                                <a href="about.html" class="nav-item nav-link">About</a>
+                                <a href="service.html" class="nav-item nav-link">Services</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            </div>
+
+                            <!-- Login button pushed to the right -->
+                            <div class="ms-auto d-flex">
+                                <button class="btn btn-outline-primary btn-sm rounded px-3 py-1 mx-3" 
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                                </button>
                             </div>
                         </div>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        <a href="#exampleModal" class="nav-item nav-link d-lg-none" data-bs-toggle="modal">Login</a>
-                    </div>
-                    <div class="ms-auto d-none d-lg-block">
-                        <button class="btn btn-outline-primary rounded-pill px-4 py-2 me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <i class="bi bi-box-arrow-in-right me-2"></i> Login
-                        </button>
-                    </div>
+                    </nav>
+                        
                 </div>
             </nav>
         </div>
     </div>
-
 
     <!-- Modal -->
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -318,8 +329,8 @@
 
           <!-- Time-Line -->
           <!-- Wrapper timeline -->
-<div id="wrapper" class="container mt-5">
-    <h5 class="px-3"><i><img src="img\icon\O'clock.png" alt="" width="30px"></i>Time Line</h5>
+        <div id="wrapper" class="container mt-5">
+            <h5 class="px-3"><i><img src="img\icon\O'clock.png" alt="" width="30px"></i>Time Line</h5>
     <div class="timeline-wrapper mt-5 mx-5">
         <div class="timeline-scroll" id="timelineScroll">
             <div class="timeline">
@@ -414,65 +425,67 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <h2 class="mb-4">Formulir Permohonan Ruangan</h2>
-                <form id="formWa">
-                    <div class="row g-3">
-                        <div class="col-12 col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
-                                <label for="name">Nama Lengkap</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="waForm" placeholder="WA">
-                                <label for="waForm">WA +62</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
-                                <label for="unit">Unit/Organisasi</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="form-floating">
-                                <select class="form-select" id="ruang">
-                                    <option selected disabled>Pilih Jenis Ruangan</option>
-                                    <option value="Kelas">Kelas</option>
-                                    <option value="Laboratorium">Laboratorium</option>
-                                    <option value="Auditorium">Auditorium</option>
-                                    <option value="Serbaguna">Ruang Serbaguna</option>
-                                </select>
-                                <label for="ruang">Jenis Ruangan</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="form-floating">
-                                <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
-                                <label for="tanggal">Tanggal Kegiatan</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="form-floating">
-                                <input type="time" class="form-control" id="waktu" placeholder="Waktu">
-                                <label for="waktu">Waktu Mulai</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
-                                <label for="message">Deskripsi Kegiatan</label>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
+                            <form id="formWa">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                                            <label for="name">Nama Lengkap</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="waForm" placeholder="WA">
+                                            <label for="waForm">WA +62</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
+                                            <label for="unit">Unit/Organisasi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="ruang">
+                                                <option selected disabled>Pilih Jenis Ruangan</option>
+                                                <option value="Kelas">Kelas</option>
+                                                <option value="Laboratorium">Laboratorium</option>
+                                                <option value="Auditorium">Auditorium</option>
+                                                <option value="serbaguna">Ruang Serbaguna</option>
+                                            </select>
+                                            <label for="ruang">Jenis Ruangan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
+                                            <label for="tanggal">Tanggal Kegiatan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="time" class="form-control" id="waktu" placeholder="Waktu">
+                                            <label for="waktu">Waktu Mulai</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
+                                            <label for="message">Deskripsi Kegiatan</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
+                                    </div>
+                                </div>
+                            </form>
+                
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
         <script>
     function kirimWA() {
@@ -597,50 +610,50 @@
 
 
     <!-- Service Start -->
-<section id="Service" class=" ">
+<section id="Service" class="py-5">
   <div id="wrapper" class="container">
-    <div class="text-center mb-5">
+    <div class="text-center mb-4">
       <h2 class="fw-bold">Our Services</h2>
       <p class="text-muted">Layanan utama untuk mendukung pemanfaatan ruang dan sarana prasarana kampus secara efisien</p>
     </div>
-    <div class="row g-4">
+    <div class="row g-3">
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow rounded-4 p-4 text-center">
-          <img src="img/icon/icon-5.png" alt="Pencarian Ruangan" class="mb-3" width="60">
-          <h5 class="fw-semibold">Pencarian & Pemesanan Ruangan</h5>
-          <p class="text-muted">Cari dan pesan ruangan seperti kelas, lab, auditorium, atau ruang serbaguna berdasarkan ketersediaan, kapasitas, dan waktu penggunaan.</p>
+        <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3 text-center">
+          <img src="img/icon/icon-5.png" alt="Pencarian Ruangan" class="mb-2" width="50">
+          <h6 class="fw-semibold">Pencarian & Pemesanan Ruangan</h6>
+          <p class="text-muted small">Cari dan pesan ruangan seperti kelas, lab, auditorium, atau ruang serbaguna berdasarkan ketersediaan, kapasitas, dan waktu penggunaan.</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow rounded-4 p-4 text-center">
-          <img src="img/icon/icon-2.png" alt="Jadwal Real-time" class="mb-3" width="60">
-          <h5 class="fw-semibold">Jadwal Real-Time & Notifikasi</h5>
-          <p class="text-muted">Lihat jadwal ruangan secara langsung dan dapatkan notifikasi terkait status pemesanan seperti disetujui, dibatalkan, atau selesai.</p>
+        <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3 text-center">
+          <img src="img/icon/icon-2.png" alt="Jadwal Real-time" class="mb-2" width="50">
+          <h6 class="fw-semibold">Jadwal Real-Time & Notifikasi</h6>
+          <p class="text-muted small">Lihat jadwal ruangan secara langsung dan dapatkan notifikasi terkait status pemesanan seperti disetujui, dibatalkan, atau selesai.</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow rounded-4 p-4 text-center">
-          <img src="img/icon/icon-3.png" alt="Manajemen Terintegrasi" class="mb-3" width="60">
-          <h5 class="fw-semibold">Manajemen Terintegrasi</h5>
-          <p class="text-muted">Terintegrasi dengan sistem administrasi kampus untuk memudahkan pengelolaan ruang dan mendukung pengambilan keputusan berbasis data.</p>
+        <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3 text-center">
+          <img src="img/icon/icon-3.png" alt="Manajemen Terintegrasi" class="mb-2" width="50">
+          <h6 class="fw-semibold">Manajemen Terintegrasi</h6>
+          <p class="text-muted small">Terintegrasi dengan sistem administrasi kampus untuk memudahkan pengelolaan ruang dan mendukung pengambilan keputusan berbasis data.</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow rounded-4 p-4 text-center">
-          <img src="img/icon/icon-4.png" alt="Laporan & Evaluasi" class="mb-3" width="60">
-          <h5 class="fw-semibold">Laporan & Evaluasi Pemanfaatan</h5>
-          <p class="text-muted">Sistem menyediakan laporan pemakaian ruangan untuk analisis efisiensi penggunaan sarana dan perencanaan ke depan.</p>
+        <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3 text-center">
+          <img src="img/icon/icon-4.png" alt="Laporan & Evaluasi" class="mb-2" width="50">
+          <h6 class="fw-semibold">Laporan & Evaluasi Pemanfaatan</h6>
+          <p class="text-muted small">Sistem menyediakan laporan pemakaian ruangan untuk analisis efisiensi penggunaan sarana dan perencanaan ke depan.</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100 border-0 shadow rounded-4 p-4 text-center">
-          <img src="img/icon/icon-6.png" alt="Akses Mudah" class="mb-3" width="60">
-          <h5 class="fw-semibold">Akses Mudah & Mobile-Friendly</h5>
-          <p class="text-muted">Dapat diakses kapan saja melalui perangkat desktop maupun mobile, mendukung fleksibilitas pengguna kampus.</p>
+        <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3 text-center">
+          <img src="img/icon/icon-6.png" alt="Akses Mudah" class="mb-2" width="50">
+          <h6 class="fw-semibold">Akses Mudah & Mobile-Friendly</h6>
+          <p class="text-muted small">Dapat diakses kapan saja melalui perangkat desktop maupun mobile, mendukung fleksibilitas pengguna kampus.</p>
         </div>
       </div>
     </div>
@@ -651,7 +664,7 @@
 
     <!-- Project Start -->
    <div class="container-xxl pt-5">
-    <div id="wrapper" class="container pb-5">
+    <div id="wrapper" class="container">
         <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-medium text-primary">Our Projects</p>
             <h1 class="display-5 mb-5">Kegiatan yang Telah Memanfaatkan Ruang Kampus</h1>
@@ -718,7 +731,7 @@
                 </div>
             </div>
 
-        
+        </div>
     </div>
 </div>
 
@@ -729,8 +742,8 @@
 
 
     <!-- Team Start -->
-        <div class="container-xxl py-5 pt-5 bg-light rounded">
-            <div id="wrapper" class="container pb-5 pt-5">
+        <div class="container-xxl py-5 bg-light rounded">
+            <div id="wrapper" class="container">
                 <div class="text-center mx-auto mb-5" style="max-width: 600px;">
                     <p class="fs-5 fw-medium text-primary">Struktur Pengelola</p>
                     <h1 class="display-6 fw-bold">Kami Siap Membantu Pengelolaan Ruang Kampus</h1>
