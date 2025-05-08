@@ -103,7 +103,10 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="KalenderPrasarana.html" class="nav-item nav-link">Kalender Prasarana</a>
+                        <a href="#profileModal" class="nav-item nav-link d-lg-none"  data-bs-toggle="modal"
+                                data-bs-target="#profileModal">Profile</a>
+                        <a href="KalenderPrasarana.html" class="nav-item nav-link ">Kalender Prasarana</a>
+                        
                         <a href="project.html" class="nav-item nav-link active">Perkuliahan</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -116,9 +119,10 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.html" class="nav-item nav-link d-lg-none">Logout</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                       <button class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center"
+                        <button class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center"
                                 style="width: 35px; height: 35px;"
                                 data-bs-toggle="modal"
                                 data-bs-target="#profileModal">
@@ -246,66 +250,82 @@
 
           <!-- Time-Line -->
           <!-- Wrapper timeline -->
+        <!-- Wrapper timeline -->
         <div id="wrapper" class="container mt-5">
+            <h4 class="py-2 ps-2"><i><img src="img\icon\O'clock.png" alt="O'clock" width="25px"></i>    Time-Line</h4>
             <div class="timeline-wrapper mt-5 mx-5">
         <div class="timeline-scroll" id="timelineScroll">
             <div class="timeline">
             
             <!-- Card item 1 -->
-            <div class="card mb-3">
-                <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">2025-05-05 09:00 | 2025-05-05 11:00</h6>
-                <strong class="d-block">Room ID: 1</strong>
-                <span class="badge bg-primary">Booked</span>
-                <p class="mt-2 mb-0">Untuk kelas tambahan</p>
-                </div>
+            <div class="timeline-item">
+                <div class="timeline-dot bg-primary"></div>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-white bg-primary p-2 rounded">2025-05-05 09:00 | 11:00</h6>
+                            <strong class="d-block">Room ID: 1</strong>
+                            <span class="badge bg-primary">Booked</span>
+                            <p class="mt-2 mb-0">Untuk kelas tambahan</p>
+                        </div>
+                    </div>
             </div>
 
             <!-- Card item 2 -->
-            <div class="card mb-3">
-                <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">2025-05-06 13:00 | 2025-05-06 15:00</h6>
-                <strong class="d-block">Room ID: 11</strong>
-                <span class="badge bg-danger">Canceled</span>
-                <p class="mt-2 mb-0">Praktikum dibatalkan</p>
-                </div>
+             <div class="timeline-item">
+                <div class="timeline-dot bg-danger"></div>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">2025-05-06 13:00 | 15:00</h6>
+                            <strong class="d-block">Room ID: 11</strong>
+                            <span class="badge bg-danger">Canceled</span>
+                            <p class="mt-2 mb-0">Praktikum dibatalkan</p>
+                        </div>
+                    </div>
             </div>
 
             <!-- Card item 3 -->
-            <div class="card mb-3">
-                <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">2025-05-07 08:00 | 2025-05-07 12:00</h6>
-                <strong class="d-block">Room ID: 5</strong>
-                <span class="badge bg-primary">Booked</span>
-                <p class="mt-2 mb-0">Seminar dosen tamu</p>
-                </div>
+            <div class="timeline-item">
+                <div class="timeline-dot bg-primary"></div>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-white bg-primary p-2 rounded">2025-05-07 08:00 | 12:00</h6>
+                            <strong class="d-block">Room ID: 5</strong>
+                            <span class="badge bg-primary">Booked</span>
+                            <p class="mt-2 mb-0">Seminar dosen tamu</p>
+                        </div>
+                    </div>
             </div>
 
             <!-- Card item 4 -->
-            <div class="card mb-3">
-                <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">2025-05-08 10:00 | 2025-05-08 12:00</h6>
-                <strong class="d-block">Room ID: 9</strong>
-                <span class="badge bg-success">Completed</span>
-                <p class="mt-2 mb-0">Rapat jurusan</p>
-                </div>
-            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot bg-success"></div>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">2025-05-08 10:00 | 12:00</h6>
+                            <strong class="d-block">Room ID: 9</strong>
+                            <span class="badge bg-success">Completed</span>
+                            <p class="mt-2 mb-0">Rapat jurusan</p>
+                        </div>
+                    </div>
 
-            <!-- Card item 5 -->
-            <div class="card mb-3">
-                <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">2025-05-09 14:00 | 2025-05-09 16:00</h6>
-                <strong class="d-block">Room ID: 4</strong>
-                <span class="badge bg-primary">Booked</span>
-                <p class="mt-2 mb-0">Acara organisasi mahasiswa</p>
-                </div>
-            </div>
 
+             <!-- Card item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-dot bg-primary"></div>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-white bg-primary p-2 rounded">2025-05-09 14:00 | 16:00</h6>
+                            <strong class="d-block">Room ID: 4</strong>
+                            <span class="badge bg-primary">Booked</span>
+                            <p class="mt-2 mb-0">Acara organisasi mahasiswa</p>
+                        </div>
+                    </div>
             </div>
         </div>
         </div>
         </div>
-
+        </div>
+        
     <!-- page  Pencarian dan jadwal kelas -->
     <!-- Ajukan Pemakaian -->
 
