@@ -415,6 +415,26 @@ body{
   .search-section {
     padding: 8px; /* Padding lebih kecil untuk layar yang sangat kecil */
   }
+
+  #formWa {
+      padding: 10px; /* Kurangi padding */
+  }
+
+  #formWa .form-floating {
+      margin-bottom: 10px; /* Kurangi jarak antar elemen */
+  }
+
+  #formWa input,
+  #formWa select,
+  #formWa textarea {
+      font-size: 14px; /* Kurangi ukuran font */
+      padding: 8px; /* Kurangi padding dalam elemen */
+  }
+
+  #formWa button {
+      font-size: 14px; /* Kurangi ukuran font tombol */
+      padding: 10px; /* Kurangi padding tombol */
+  }
 }
 
 /*** Time-line ***/
@@ -633,7 +653,32 @@ body{
     opacity: 1;
 }
 
+@media (max-width: 576px) {
+    .about p,
+    .about h1,
+    .about h5,
+    .about span {
+        font-size: 14px; /* Kurangi ukuran font */
+        line-height: 1.5; /* Sesuaikan jarak antar baris */
+    }
 
+    .about h1 {
+        font-size: 20px; /* Ukuran lebih kecil untuk heading */
+    }
+
+    .about .btn {
+        font-size: 12px; /* Ukuran font tombol lebih kecil */
+        padding: 8px 12px; /* Kurangi padding tombol */
+    }
+
+    .about .row {
+        gap: 10px; /* Kurangi jarak antar elemen */
+    }
+
+    .about .col-sm-6 {
+        margin-bottom: 15px; /* Tambahkan margin bawah untuk elemen grid */
+    }
+}
 
 
 /*** Service ***/
