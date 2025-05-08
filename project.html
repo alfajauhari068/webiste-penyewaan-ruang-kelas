@@ -191,7 +191,7 @@
       </div>
       <div class="modal-body">
         <div class="text-center mb-3">
-          <img src="img/me.jpg" alt="Foto Profil" class="rounded-circle mb-2" style="width: 64px; height: 64px;">
+          <img src="img/img/me.jpg" alt="Foto Profil" class="rounded-circle mb-2" style="width: 64px; height: 64px;">
           <h5 class="mb-0">ALFA JAUHARI</h5>
           <small class="text-muted">user@example.com</small>
         </div>
@@ -252,7 +252,7 @@
           <!-- Wrapper timeline -->
         <!-- Wrapper timeline -->
         <div id="wrapper" class="container mt-5">
-    <h5 class="px-3"><i><img src="img\icon\O'clock.png" alt="" width="30px"></i>Time Line</h5>
+            <h5 class="px-3"><i><img src="img\icon\O'clock.png" alt="" width="30px"></i>Time Line</h5>
     <div class="timeline-wrapper mt-5 mx-5">
         <div class="timeline-scroll" id="timelineScroll">
             <div class="timeline">
@@ -327,6 +327,7 @@
     </div>
 </div>
         
+
     <!-- page  Pencarian dan jadwal kelas -->
     <!-- Ajukan Pemakaian -->
 
@@ -347,67 +348,65 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <h2 class="mb-4">Formulir Permohonan Ruangan</h2>
-                            <form id="formWa">
-                                <div class="row g-3">
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
-                                            <label for="name">Nama Lengkap</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="waForm" placeholder="WA">
-                                            <label for="waForm">WA +62</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
-                                            <label for="unit">Unit/Organisasi</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="ruang">
-                                                <option selected disabled>Pilih Jenis Ruangan</option>
-                                                <option value="kelas">Kelas</option>
-                                                <option value="lab">Laboratorium</option>
-                                                <option value="aula">Auditorium</option>
-                                                <option value="serbaguna">Ruang Serbaguna</option>
-                                            </select>
-                                            <label for="ruang">Jenis Ruangan</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
-                                            <label for="tanggal">Tanggal Kegiatan</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <input type="time" class="form-control" id="waktu" placeholder="Waktu">
-                                            <label for="waktu">Waktu Mulai</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
-                                            <label for="message">Deskripsi Kegiatan</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 text-center">
-                                        <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
-                                    </div>
-                                </div>
-                            </form>
-                
+                <form id="formWa">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                                <label for="name">Nama Lengkap</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="waForm" placeholder="WA">
+                                <label for="waForm">WA +62</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="unit" placeholder="Unit/Organisasi">
+                                <label for="unit">Unit/Organisasi</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-floating">
+                                <select class="form-select" id="ruang">
+                                    <option selected disabled>Pilih Jenis Ruangan</option>
+                                    <option value="kelas">Kelas</option>
+                                    <option value="lab">Laboratorium</option>
+                                    <option value="aula">Auditorium</option>
+                                    <option value="serbaguna">Ruang Serbaguna</option>
+                                </select>
+                                <label for="ruang">Jenis Ruangan</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="tanggal" placeholder="Tanggal">
+                                <label for="tanggal">Tanggal Kegiatan</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-floating">
+                                <input type="time" class="form-control" id="waktu" placeholder="Waktu">
+                                <label for="waktu">Waktu Mulai</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Tulis kebutuhan kegiatan Anda di sini" id="message" style="height: 130px"></textarea>
+                                <label for="message">Deskripsi Kegiatan</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary w-100 py-3" type="button" onclick="kirimWA()">Kirim Permohonan</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
+    </div>
+</div>
 
 
         <script>
@@ -454,9 +453,9 @@
             
             <div class="project-item mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="img/auditorium.JPG" alt="Seminar Kelas A">
+                    <img class="img-fluid" src="img\img\auditorium.JPG" alt="Seminar Kelas A">
                     <div class="project-overlay">
-                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/auditorium.JPG"
+                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img\img\auditorium.JPG"
                             data-lightbox="project"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-lg-square btn-light rounded-circle m-1" href="#"><i class="fa fa-link"></i></a>
                     </div>
@@ -469,9 +468,9 @@
 
             <div class="project-item mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="img/workshop.jpg" alt="Workshop Lab Komputer">
+                    <img class="img-fluid" src="img\img\workshop.jpg" alt="Workshop Lab Komputer">
                     <div class="project-overlay">
-                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/workshop.jpg"
+                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img\img\workshop.jpg"
                             data-lightbox="project"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-lg-square btn-light rounded-circle m-1" href="#"><i class="fa fa-link"></i></a>
                     </div>
@@ -484,9 +483,9 @@
 
             <div class="project-item mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="img/forum_mahasiswa.jpg" alt="Auditorium Acara Kampus">
+                    <img class="img-fluid" src="img\img\forum_mahasiswa.jpg" alt="Auditorium Acara Kampus">
                     <div class="project-overlay">
-                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/forum_mahasiswa.jpg"
+                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img\img\forum_mahasiswa.jpg"
                             data-lightbox="project"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-lg-square btn-light rounded-circle m-1" href="#"><i class="fa fa-link"></i></a>
                     </div>
@@ -499,9 +498,9 @@
 
             <div class="project-item mb-5">
                 <div class="position-relative">
-                    <img class="img-fluid" src="img/pameran.JPG" alt="Ruang Serbaguna">
+                    <img class="img-fluid" src="img\img\pameran.JPG" alt="Ruang Serbaguna">
                     <div class="project-overlay">
-                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/pameran.JPG"
+                        <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img\img\pameran.JPG"
                             data-lightbox="project"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-lg-square btn-light rounded-circle m-1" href="#"><i class="fa fa-link"></i></a>
                     </div>
