@@ -459,7 +459,7 @@ body{
 /*** About ***/
 .about {
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), 
-            url(../img/img/fasilitas-1.jpeg) left center no-repeat;
+            url(../img/img/sarpras.png) left center no-repeat;
     background-size: cover;
     border-radius: 10px;
 }
