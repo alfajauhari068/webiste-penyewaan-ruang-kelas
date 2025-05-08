@@ -128,7 +128,14 @@ body{
 }
 
 @media (max-width: 991.98px) {
+
+    .navbar .navbar-collapse {
+         
+    }
+
     .navbar .navbar-nav {
+        height: 100%;
+        min-height: 300px;
         background: rgba(9, 146, 243, 0.333); /* semi-transparent blue */
         backdrop-filter: blur(10px); /* glass effect */
         padding: 20px;
