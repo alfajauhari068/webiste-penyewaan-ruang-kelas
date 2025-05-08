@@ -91,8 +91,8 @@ body{
     font-weight: normal;
 }
 
+/* navbar */
 
-/*** Navbar ***/
 .sticky-top {
     top: -100px;
     transition: .5s;
@@ -253,6 +253,7 @@ body{
 
 .nav-tabs .btn.active {
   background-color: #0d6efd;
+  backdrop-filter: blur(10px);
   color: #0992f3;
 }
 
@@ -349,7 +350,7 @@ body{
 
 .page-header .breadcrumb-item,
 .page-header .breadcrumb-item a {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--light);
 }
 
@@ -455,12 +456,88 @@ body{
     box-shadow: 0 0 0 2px #dee2e6;
 }
 
+@media (max-width: 576px) {
+  .timeline-scroll {
+    width: 100%;
+    min-width: 300px; /* PERBAIKI di sini */
+    max-height: 400px;
+    padding-right: 5px;
+    border-width: 3px;
+  }
+
+  .timeline {
+     margin-bottom: 1rem;
+    width: auto; /* Gunakan auto untuk fleksibilitas */
+    min-width: 0; /* Hapus batas minimum */
+    max-width: 100%; /* Batasi lebar maksimum */
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .timeline .card {
+    font-size: 0.85rem; /* Sesuaikan ukuran font */
+    padding: 0.5rem;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    left: -7px;
+    top: 6px;
+  }
+
+  .timeline-item {
+    margin-bottom: 1rem;
+    min-height: 10px !important;
+    min-width: 100% !important;
+  }
+
+  .timeline .card {
+    font-size: 0.75rem !important; /* Perkuat */
+    padding: 0.25rem !important;
+    margin: 0;
+    width: 100% !important;
+    min-height: 10px !important;
+    min-width: 100% !important;
+  }
+
+  .timeline .card-body {
+    padding: 0.25rem !important;
+    
+  }
+
+  .timeline .card h6 {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline .card p,
+  .timeline .card strong,
+  .timeline .card span {
+    font-size: 0.75rem !important;
+  }
+
+  .badge {
+    font-size: 0.7rem !important;
+  }
+}
+
+
+
+
+
+
 
 /*** About ***/
 .about {
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), 
             url(../img/img/sarpras.png) left center no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px;
     border-radius: 10px;
 }
 
