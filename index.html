@@ -416,7 +416,7 @@
                 <h2 class="mb-4">Formulir Permohonan Ruangan</h2>
                 <form id="formWa">
                     <div class="row g-3">
-                        <div class="col-12">
+                        <div class="col-12 col-sm-6">
                             <div class="form-floating">
                                 <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
                                 <label for="name">Nama Lengkap</label>
@@ -513,74 +513,64 @@
 
     <!-- About Start -->
     <div class="container-xxl about mb-5">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-lg-6">
-                <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
-                    <!-- Tombol Play -->
-                    <button type="button" class="btn-play" data-bs-toggle="modal"
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
+                        <!-- Tombol Play -->
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
                         data-src="https://www.youtube.com/embed/dAE7gYGNCIY" data-bs-target="#videoModal">
                         <span></span>
-                    </button>
+                        </button>
 
-                    <!-- Modal Video -->
-                    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel"
-                        aria-hidden="true">
+                        <!-- Modal Video -->
+                        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
-                                <div class="modal-body p-0">
-                                    <div class="ratio ratio-16x9">
-                                        <iframe id="videoFrame" class="embed-responsive-item" src=""
-                                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                    </div>
+                            <div class="modal-body p-0">
+                                <div class="ratio ratio-16x9">
+                                <iframe id="videoFrame" class="embed-responsive-item" src="" allow="autoplay; encrypted-media"
+                                    allowfullscreen></iframe>
                                 </div>
                             </div>
+                            </div>
                         </div>
-                    </div>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="bg-white rounded-top p-5 mt-lg-5">
-                    <p class="fs-5 fw-medium text-primary">About Us</p>
-                    <h1 class="display-6 mb-4">Optimalisasi Ruang, Mendukung Aktivitas Akademik yang Efisien</h1>
-                    <p class="mb-4 read-more-text">
-                        Website ini merupakan platform digital yang dirancang untuk membantu civitas akademika dalam
-                        mengelola dan memanfaatkan ruang serta sarana prasarana kampus secara lebih efektif dan
-                        transparan. Dengan sistem yang terintegrasi, pengguna dapat melakukan pencarian, pemesanan, dan
-                        pelacakan ketersediaan ruang seperti kelas, laboratorium, auditorium, serta ruang serbaguna
-                        dengan mudah dan cepat.
+                <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white rounded-top p-5 mt-lg-5">
+                        <p class="fs-5 fw-medium text-primary">About Us</p>
+                        <h1 class="display-6 mb-4">Optimalisasi Ruang, Mendukung Aktivitas Akademik yang Efisien</h1>
+                        <p class="mb-4 read-more-text">
+                        Website ini merupakan platform digital yang dirancang untuk membantu civitas akademika dalam mengelola dan memanfaatkan ruang serta sarana prasarana kampus secara lebih efektif dan transparan. Dengan sistem yang terintegrasi, pengguna dapat melakukan pencarian, pemesanan, dan pelacakan ketersediaan ruang seperti kelas, laboratorium, auditorium, serta ruang serbaguna dengan mudah dan cepat.
 
-                        Kami hadir untuk mendukung kelancaran kegiatan akademik, administratif, maupun kegiatan
-                        organisasi mahasiswa dengan menyediakan akses informasi yang real-time, akurat, dan
-                        user-friendly.
-                    </p>
-                    <button class="btn btn-link p-0 read-more-btn text-primary pb-3">Read More.</button>
-                    <div class="row g-5 pt-2 mb-2">
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/icon/icon-5.png" alt="" width="50px">
-                            <h5 class="mb-">Pencarian dan Pemesanan Ruangan</h5>
-                            <span>Memungkinkan pengguna untuk mencari dan memesan ruangan sesuai kebutuhan berdasarkan
-                                jenis, kapasitas, dan jadwal.</span>
+                        Kami hadir untuk mendukung kelancaran kegiatan akademik, administratif, maupun kegiatan organisasi mahasiswa dengan menyediakan akses informasi yang real-time, akurat, dan user-friendly.</p>
+                        <button class="btn btn-link p-0 read-more-btn text-primary pb-3">Read More.</button>
+                        <div class="row g-5 pt-2 mb-2">
+                            <div class="col-sm-6">
+                                <img class="img-fluid mb-4" src="img/icon/icon-5.png" alt="" width="50px">
+                                <h5 class="mb-">Pencarian dan Pemesanan Ruangan</h5>
+                                <span>Memungkinkan pengguna untuk mencari dan memesan ruangan sesuai kebutuhan berdasarkan jenis, kapasitas, dan jadwal.</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="" width="50px">
+                                <h5 class="mb-">Informasi Ketersediaan Real-Time</h5>
+                                <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="" width="50px">
+                                <h5 class="mb-">Manajemen Jadwal Terintegrasi</h5>
+                                <span>Menyediakan data pemakaian ruangan untuk keperluan pelaporan dan pengembangan kebijakan kampus.</span>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="" width="50px">
-                            <h5 class="mb-">Informasi Ketersediaan Real-Time</h5>
-                            <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="" width="50px">
-                            <h5 class="mb-">Manajemen Jadwal Terintegrasi</h5>
-                            <span>Menyediakan data pemakaian ruangan untuk keperluan pelaporan dan pengembangan kebijakan
-                                kampus.</span>
-                        </div>
+                        <a class="btn btn-primary rounded-pill py-2 px-2" href="">Explore More</a>
                     </div>
-                    <a class="btn btn-primary rounded-pill py-2 px-2" href="">Explore More</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <!-- About End -->
 
 
