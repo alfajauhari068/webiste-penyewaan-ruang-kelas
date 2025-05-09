@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard - Sistem Pengelolaan Ruang Kampus</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Header -->
+   <div class="bg-primary text-white">
+    <div class="container py-3">
+        <div class="row align-items-center">
+            <!-- Logo -->
+            <div class="col-6 d-flex align-items-center">
+                <img src="img/img/logo/Logoubhi.png" alt="Logo 2" class="img-fluid me-2" style="max-width: 50px;">
+                <h6 class="mb-0">Universitas Bhinneka</h6>
+            </div>
+            <!-- Login Button -->
+            <div class="col-6 text-end">
+                <button class="btn btn-outline-info btn-sm bi bi-box-arrow-in-right"
+                        data-bs-toggle="modal" data-bs-target="#loginModal"
+                        style="border: 2px solid #ffffff;"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Navigasi -->
+    <div class="container-fluid bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="#" class="navbar-brand d-lg-none">UBHI</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
+                        <li class="nav-item"><a href="KalenderPrasarana2.html" class="nav-link">Kalender Prasarana</a></li>
+                        <li class="nav-item"><a href="about2.html" class="nav-link">Tentang</a></li>
+                        <li class="nav-item"><a href="contact2.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="container-fluid bg-primary py-5 text-white text-center">
+        <h1 class="display-4 fw-bold">
+            <i class="bi bi-building me-2"></i> Dashboard
+        </h1>
+        <p class="lead">Selamat datang di <span class="fw-bold">Sistem Pengelolaan Ruang Kampus</span></p>
+        <p>Platform untuk melihat dan mengelola jadwal ruang kampus secara efisien.</p>
+    </div>
+
+    <!-- Informasi Umum -->
+<div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h2 class="fw-bold mb-3">🎓 Sistem Pengelolaan Ruang Kampus</h2>
+        <p class="lead text-muted">
+          Platform untuk melihat dan mengelola pemesanan ruang kelas, seminar, dan fasilitas kampus secara efisien.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end text-center">
+        <a href="#login" class="btn btn-primary btn-lg rounded-pill mt-3 mt-md-0" data-bs-toggle="modal" data-bs-target="#loginModal">
+          <i class="bi bi-box-arrow-in-right me-2"></i> Login
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pengumuman -->
+  <div class="container my-5">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h4 class="card-title fw-bold mb-3"><i class="bi bi-megaphone-fill me-2 text-warning"></i>Pengumuman</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">📅 Ruang Auditorium tidak tersedia <strong>12–15 Mei</strong></li>
+          <li class="list-group-item">🎓 Perkuliahan semester baru dimulai <strong>1 September</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tentang Sistem -->
+  <div class="container my-5">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h4 class="card-title fw-bold mb-3"><i class="bi bi-info-circle-fill me-2 text-info"></i>Tentang Sistem</h4>
+        <p class="mb-2">
+          Aplikasi ini bertujuan untuk mempermudah pengelolaan ruang kampus secara efisien dan transparan.
+        </p>
+        <p class="mb-0">
+          <strong>Unit Pengelola:</strong> Biro Umum Universitas Bhinneka.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="handleLogin(event)">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            // Simulasi login berhasil
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="foot-body" class="container py-5">
+            <div class="row g-5">
+                <!-- Info Kampus -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Alamat Kami</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Mayor Sujadi Timur No.07 Tulungagung</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(0274) 123-4567</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info_ubhi.ac.id</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Link Navigasi -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Tautan Cepat</h4>
+                    <a class="btn btn-link" href="about.html">Tentang Kami</a>
+                    <a class="btn btn-link" href="#roomSearch">Daftar Ruangan</a>
+                    <a class="btn btn-link" href="#quot-start">Cara Pemesanan</a>
+                    <a class="btn btn-link" href="project.html">Kontak</a>
+                    <a class="btn btn-link" href="contact.html">FAQ</a>
+                </div>
+                <!-- Jam Operasional -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Jam Operasional</h4>
+                    <p class="mb-1">Senin - Jumat</p>
+                    <h6 class="text-light">08.00 - 17.00 WIB</h6>
+                    <p class="mb-1">Sabtu</p>
+                    <h6 class="text-light">08.00 - 12.00 WIB</h6>
+                    <p class="mb-1">Minggu & Hari Libur</p>
+                    <h6 class="text-light">Tutup</h6>
+                </div>
+                <!-- Newsletter atau Info Tambahan -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Newsletter</h4>
+                    <p>Dapatkan informasi terbaru seputar penyewaan ruang kampus kami langsung ke email Anda.</p>
+                    <div class="position-relative w-100">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Email Anda">
+                        <button type="button"
+                            class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">Daftar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 text-light small">
+                &copy; 2025 <strong>ubhiTulungagung.co.id</strong>. Hak cipta dilindungi. | Developed by Alfa Jauhari.
+            </div>
+        </div>
+    </div>
+    
+        <!-- Footer End -->
+    
+    
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4 bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <!-- Kiri: Hak Cipta -->
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-medium text-light" href="#">Info_ubhi.com Space</a>, All rights reserved.
+                </div>
+                <!-- Kanan: Pengembang -->
+                <div class="col-md-6 text-center text-md-end">
+                    Developed by <a class="fw-medium text-light" href="#">Alfa Jauhari</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Copyright End -->
+    
+    
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+                class="bi bi-arrow-up"></i></a>
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</body>
+
+</html>
+
+
