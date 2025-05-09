@@ -6,6 +6,11 @@
     --dark: #1C2035;
 }
 
+.bg-gradient-primary {
+    background: linear-gradient(550deg, #ffffff4a, #5ccbff, #6200ff82);
+    color: #ffffff;
+}
+
 body{
     background-color:var(--primary);
 }
