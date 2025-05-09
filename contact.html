@@ -99,8 +99,6 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="#profileModal" class="nav-item nav-link d-lg-none"  data-bs-toggle="modal"
-                                data-bs-target="#profileModal">Profile</a>
                         <a href="KalenderPrasarana.html" class="nav-item nav-link">Kalender Prasarana</a>
                         <a href="project.html" class="nav-item nav-link">Perkuliahan</a>
                         <div class="nav-item dropdown">
@@ -108,21 +106,28 @@
                             <div class="dropdown-menu bg-light rounded-3 rounded-bottom m-0">
                                 <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="quote.html" class="dropdown-item">Quotation</a>
+                                <a href="quote.html" class="dropdown-item">Facility Request
+                                </a>
                             </div>
                         </div>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                        <a href="index.html" class="nav-item nav-link d-lg-none">Logout</a>
+                        <a href="dashboard.html" class="nav-item nav-link d-lg-none">Logout</a>
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
+                    <div class="ms-auto d-none d-lg-flex align-items-center gap-2">
+                        <!-- Tombol Profil -->
                         <button class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center"
                                 style="width: 35px; height: 35px;"
                                 data-bs-toggle="modal"
                                 data-bs-target="#profileModal">
                             <i class="fa fa-user"></i>
                         </button>
+                    
+                        <!-- Tombol Logout -->
+                        <a href="dashboard.html" class="btn btn-outline-primary px-3 py-1 rounded-pill">
+                            <i class="fa fa-sign-out-alt me-1"></i> Logout
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -184,7 +189,7 @@
       </div>
       <div class="modal-body">
         <div class="text-center mb-3">
-          <img src="../img/me.jpg" alt="Foto Profil" class="rounded-circle mb-2" style="width: 64px; height: 64px;">
+          <img src="img/img/me.jpg" alt="Foto Profil" class="rounded-circle mb-2" style="width: 64px; height: 64px;">
           <h5 class="mb-0">ALFA JAUHARI</h5>
           <small class="text-muted">user@example.com</small>
         </div>
@@ -203,99 +208,104 @@
     <!-- Contact Start -->
     <div class="container-xxl py-5">
         <div id="wrapper" class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Contact Us</p>
-                <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3 class="mb-4">Need a functional contact form?</h3>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form onsubmit="sendToWhatsApp(); return false;">
-            <div class="row g-3">
-                <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="name" placeholder="Nama Anda" required>
-                    <label for="name">Name</label>
+            <div class="contact">
+                <div id="contact" class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                    <p class="fs-5 fw-medium text-primary">Contact Us</p>
+                    <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
                 </div>
-                </div>
-                <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="phone" placeholder="Nomor WhatsApp Anda" required>
-                    <label for="phone">Phone</label>
-                </div>
-                </div>
-                
-                <div class="col-12">
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Tulis pesan di sini" id="message" style="height: 200px" required></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-                </div>
-                <div class="col-12">
-                <button class="btn btn-success rounded-pill py-3 px-5" type="submit">Kirim via WhatsApp</button>
-                </div>
-            </div>
-            </form>
-
-            <script>
-            function sendToWhatsApp() {
-                const name = document.getElementById("name").value;
-                const phone = document.getElementById("phone").value;
-                const message = document.getElementById("message").value;
-
-                // Ganti nomor tujuan di bawah dengan nomor WhatsApp tujuan (tanpa + atau spasi)
-                const tujuan = "6281553675279";
-
-                const fullMessage = `Halo, saya ${name} (%0AWhatsApp: ${phone}) Ingin menghubungi Anda:%0A%0A${message}`;
-
-                const whatsappURL = `https://wa.me/${tujuan}?text=${fullMessage}`;
-                window.open(whatsappURL, '_blank');
-            }
-            </script>
-
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <h3 class="mb-4">Contact Details</h3>
-                    <div class="d-flex border-bottom pb-3 mb-3">
-                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
-                            <i class="fa fa-map-marker-alt text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h6>Our Office</h6>
-                            <span>123 Street, UniversitasBhinneka, Tulungagung</span>
-                        </div>
-                    </div>
-                    <div class="d-flex border-bottom pb-3 mb-3">
-                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h6>Call Us</h6>
-                            <span>+012 345 67890</span>
-                        </div>
-                    </div>
-                    <div class="d-flex border-bottom-0 pb-3 mb-3">
-                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
-                            <i class="fa fa-envelope text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h6>Mail Us</h6>
-                            <span>info@ubhi.com</span>
-                        </div>
+                <div class="row g-5">
+                    <!-- Form Kontak -->
+                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <h3 class="mb-4">Need a functional contact form?</h3>
+                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                        <form onsubmit="sendToWhatsApp(); return false;">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Nama Anda" required>
+                                        <label for="name">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="phone" placeholder="Nomor WhatsApp Anda" required>
+                                        <label for="phone">Phone</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Tulis pesan di sini" id="message" style="height: 200px" required></textarea>
+                                        <label for="message">Your Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-success rounded-pill py-3 px-5 w-100" type="submit">Kirim via WhatsApp</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
 
-                    <iframe class="w-100 rounded"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.837087394664!2d111.9223632!3d-8.0770988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78e30ea6877ccd%3A0x450dff8d9025c326!2sUniversitas%20Bhinneka%20PGRI%20Tulungagung!5e0!3m2!1sid!2sid!4v1714989492679!5m2!1sid!2sid"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0">
-                    </iframe>
 
+                    <script>
+                        function sendToWhatsApp() {
+                            const name = document.getElementById("name").value;
+                            const phone = document.getElementById("phone").value;
+                            const message = document.getElementById("message").value;
+            
+                            // Ganti nomor tujuan di bawah dengan nomor WhatsApp tujuan (tanpa + atau spasi)
+                            const tujuan = "6281553675279";
+            
+                            const fullMessage = `Halo, saya ${name} (%0AWhatsApp: ${phone}) Ingin menghubungi Anda:%0A%0A${message}`;
+            
+                            const whatsappURL = `https://wa.me/${tujuan}?text=${fullMessage}`;
+                            window.open(whatsappURL, '_blank');
+                        }
+                        </script>
+
+                    <!-- Detail Kontak -->
+                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                        <h3 class="mb-4">Contact Details</h3>
+                        <div class="d-flex border-bottom pb-3 mb-3 align-items-center">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                <i class="fa fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Our Office</h6>
+                                <small>123 Street, UniversitasBhinneka, Tulungagung</small>
+                            </div>
+                        </div>
+                        <div class="d-flex border-bottom pb-3 mb-3 align-items-center">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Call Us</h6>
+                                <small>+012 345 67890</small>
+                            </div>
+                        </div>
+                        <div class="d-flex border-bottom-0 pb-3 mb-3 align-items-center">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                <i class="fa fa-envelope text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Mail Us</h6>
+                                <small>info@ubhi.com</small>
+                            </div>
+                        </div>
+
+                        <!-- Google Maps -->
+                        <iframe class="w-100 rounded"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.837087394664!2d111.9223632!3d-8.0770988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78e30ea6877ccd%3A0x450dff8d9025c326!2sUniversitas%20Bhinneka%20PGRI%20Tulungagung!5e0!3m2!1sid!2sid!4v1714989492679!5m2!1sid!2sid"
+                            frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Contact End -->
 
 
     <!-- Footer Start -->
