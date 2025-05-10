@@ -6,10 +6,85 @@
     --dark: #1C2035;
 }
 
+/* root bg */
+
+/* dashboard */
 .bg-gradient-primary {
-    background: linear-gradient(550deg, #ffffff4a, #5ccbff, #6200ff82);
-    color: #ffffff;
+    background: linear-gradient(120deg, rgba(0,123,255,0.65), rgba(102,16,242,0.65)), url('../img/bg-img/futuristik-1.png') center/cover no-repeat;
+    min-height: 300px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
+
+/* Responsive dashboard image */
+.dashboard-img-responsive {
+    max-width: 420px;
+    min-width: 160px;
+    max-height: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 991.98px) { /* Tablet & ponsel */
+    .dashboard-img-responsive {
+        max-width: 100% !important;
+        max-height: 180px !important;
+        min-width: 120px !important;
+    }
+}
+
+/* kalender2 */
+/* Responsive dashboard image */
+.calendar-img-responsive {
+    max-width: 420px;
+    min-width: 160px;
+    max-height: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 991.98px) { /* Tablet & ponsel */
+    .calendar-img-responsive {
+        max-width: 100% !important;
+        max-height: 180px !important;
+        min-width: 120px !important;
+    }
+}
+
+/* Tentang */
+.bg-gradient-primary-about2 {
+    background: linear-gradient(120deg, rgba(0,123,255,0.65), rgba(102,16,242,0.65)), url('../img/bg-img/futuristik3.png') center/cover no-repeat;
+    min-height: 500px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* kontak */
+.bg-gradient-primary-contact2 {
+    background: linear-gradient(120deg, rgba(0,123,255,0.65), rgba(102,16,242,0.65)), url('../img/bg-img/futuristik2.png') center/cover no-repeat;
+    min-height: 500px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+
+/* footer */
+.bg-gradient-primary-footer {
+    background: linear-gradient(120deg,  rgba(0, 0, 255, 0.561)), url('../img/img/Gedung-1.jpg') center/cover no-repeat;
+    min-height: 300px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+
+
+/* background: linear-gradient(120deg, rgba(0,123,255,0.85), rgba(102,16,242,0.85)) */
 
 body{
     background-color:var(--primary);
@@ -94,6 +169,62 @@ body{
     align-items: center;
     justify-content: center;
     font-weight: normal;
+}
+
+/* navbar-top */
+
+#logo {
+    align-items: left;
+    max-width: 30px;
+    width: 50%;
+    height: auto;
+}
+
+.logo .h6{
+    font-size: 5px; /* Ukuran font lebih kecil */
+}
+ /* Responsivitas untuk layar kecil */
+ @media (max-width: 768px) {
+
+    #logo {
+        align-items: left;
+        max-width: 50%;
+        width: auto;
+        height: auto;
+        
+    }
+    .logo .h6{
+        font-size: 5px; /* Ukuran font lebih kecil */
+    }
+
+    
+
+    #contact-info {
+        
+        height: 100%;
+        max-width: 70%;
+        max-height: 50px;
+        font-size: 20px; /* Ukuran font lebih kecil */
+    }
+
+    .small-info small {
+        font-size: 12px; /* Ukuran font lebih kecil */
+    }
+
+    img.img-fluid {
+        width: 40px !important; /* Ukuran logo lebih kecil */
+    }
+}
+
+/* btn-login */
+@media (max-width: 768px) {
+    .ms-auto .btn {
+        display: flex; /* Mengaktifkan Flexbox */
+        justify-content: center; /* Menempatkan tombol di tengah secara horizontal */
+        align-items: center; /* Menempatkan tombol di tengah secara vertikal */
+        height: 100%; /* Pastikan tombol berada di tengah container */
+        text-align: center; /* Menyesuaikan teks jika ada */
+    }
 }
 
 /* navbar */
@@ -189,6 +320,13 @@ body{
         outline: none;
         box-shadow: none;
     }
+
+    .welcome-img-custom {
+        max-width: 100% !important;
+        max-height: 180px !important;
+        min-width: 120px !important;
+        margin: 0 auto;
+    }
 }
 @media (min-width: 992px) {
     
@@ -208,8 +346,27 @@ body{
         transition: .5s;
         opacity: 1;
     }
+
+    .welcome-img-custom {
+        max-width: 420px !important;
+        max-height: 320px !important;
+        min-width: 160px !important;
+    }
 }
 
+
+#logo {
+    max-width: 30px;
+    width: 50%;
+    height: auto;
+}
+
+#btn-login {
+    max-width: 30px;
+    width: 50%;
+    height: auto;
+        margin-bottom: 4px;
+    }
 
 #exampleModal{
  background-color: #0554ff58;
@@ -331,16 +488,14 @@ body{
 }
 
 @media (max-width: 768px) {
-    #header-carousel .carousel-item {
-        position: relative;
-        min-height: 450px;
-    }
-    
-    #header-carousel .carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    @media (max-width: 768px) {
+        .small-info small {
+            font-size: 8px;
+        }
+
+        img.img-fluid {
+            width: 30px !important;
+        }
     }
 }
 
@@ -686,6 +841,47 @@ body{
 }
 
 
+/* Contact */
+.container#wrapper .contact{
+    background-color: #FFFFFF;
+    box-shadow: #00000060 0 2px 5px;
+    border-radius: 10px;
+    font-size: small;
+    margin: 20px;
+    padding: 30px;
+}
+
+.container#wrapper .btn{
+    align-items: center;
+    width: 10px;
+    height:40px;
+}
+
+ /* Ukuran ikon dan font lebih kecil di layar kecil */
+ @media (max-width: 768px) {
+    .btn-square {
+        width: 10px;
+        height:10px;
+    }
+
+    .btn-square i {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 0.75rem;
+    }
+
+    small {
+        font-size: 0.700rem;
+    }
+}
+/* Contact End */
+
 /*** Service ***/
 
 
@@ -734,6 +930,58 @@ body{
 
 .service-item:hover .service-btn {
     bottom: -1.5rem;
+}
+
+/* Styling umum untuk card */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+.service-card h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 576px) {
+  #Service h2 {
+    font-size: 1.5rem;
+  }
+
+  #Service p {
+    font-size: 0.875rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-card img {
+    max-width: 40px;
+  }
+
+  .service-card h6 {
+    font-size: 0.9rem;
+  }
+
+  .service-card p {
+    font-size: 0.75rem;
+  }
 }
 
 
@@ -891,10 +1139,11 @@ body{
 
     /* Kalender prasarana */
     
-     #calendar {
+    #calendar {
         max-width: 1200px;
         background-color: #A7E6FF;
         border-radius: 10px;
+        font-size: 20px;
     }
 
     /* Kalender prasarana */
@@ -925,9 +1174,17 @@ body{
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--light);
+    
     letter-spacing: 1px;
     box-shadow: none;
+}
+
+footer h6 {
+    color: #fff !important;
+}
+
+footer h5 {
+    color: #fff !important;
 }
 
 .copyright {
@@ -941,3 +1198,87 @@ body{
 .copyright a:hover {
     color: var(--primary) !important;
 }
+
+
+/* from-contact */
+.formthree {
+    background: #f7f7f7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.formthree form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.formthree .form-control {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 15px;
+    border-bottom: 1px solid #d3d3d3;
+    background: #ffffffc3;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.formthree textarea.form-control {
+    min-height: 120px;
+}
+
+.formthree form .btn {
+    border-radius: 0 !important;
+    margin: 30px auto 0 auto;
+    display: block;
+    background: #4285f4;
+    border: 1px solid #4285f4;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+}
+
+.formthree .btn-primary:focus,
+.formthree .btn-primary:hover {
+    background-color: transparent;
+    color: #4285f4;
+    border: 1px solid #4285f4 !important;
+}
+
+@media (max-width: 576px) {
+    .formthree .form-control {
+      font-size: 0.9rem;
+      height: 38px;
+    }
+  }
+
+  /* From permohonan Ruangan */
+  .card {
+        border-radius: 1.5rem;
+    }
+    .form-floating > .form-control, 
+    .form-floating > .form-select {
+        border-radius: 0.75rem;
+    }
