@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>UBHI-Booking Room Website</title>
+    <title>Dashboard - Sistem Pengelolaan Ruang Kampus</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -27,41 +27,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <style>
-        .welcome-img-custom {
-            max-width: 420px;
-            min-width: 160px;
-            max-height: 320px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
-        @media (max-width: 991.98px) {
-            .welcome-img-custom {
-                max-width: 100% !important;
-                max-height: 200px !important;
-                min-width: 180px !important;
-            }
-        }
-
-        /* Paksa grid dan kolom Bootstrap tetap mobile di ponsel walau mode desktop */
-        @media (max-width: 991.98px), (max-width: 1200px) and (max-device-width: 991.98px) {
-            .row.flex-column-reverse.flex-lg-row {
-                flex-direction: column-reverse !important;
-            }
-            .col-lg-5, .col-lg-7, .col-lg-6, .col-lg-4, .col-lg-3, .col-lg-8, .col-lg-9, .col-lg-12 {
-                width: 100% !important;
-                max-width: 100% !important;
-                flex: 0 0 100% !important;
-            }
-            .mb-lg-0 {
-                margin-bottom: 1.5rem !important;
-            }
-        }
-    </style>
     
+    <style>
+        
+    </style>
 </head>
 
 <script>
@@ -83,8 +52,34 @@
     // Update setiap detik
     setInterval(updateDateTime, 1000);
     updateDateTime(); // jalankan saat pertama kali
-  </script>
-  
+
+    // Modal Buat pesanan
+    
+        document.getElementById('formPemesanan').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Ambil data form
+            const nama = document.getElementById('namaPemesan').value;
+            const ruangan = document.getElementById('ruangan').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const waktu = document.getElementById('waktu').value;
+            const keterangan = document.getElementById('keterangan').value;
+
+            // Validasi sederhana (bisa dikembangkan)
+            if(!nama || !ruangan || !tanggal || !waktu) {
+                alert('Mohon lengkapi semua data wajib!');
+                return;
+            }
+
+            // Simulasi sukses (bisa diganti AJAX ke backend)
+            alert('Pemesanan berhasil!\n\nNama: ' + nama + '\nRuangan: ' + ruangan + '\nTanggal: ' + tanggal + '\nWaktu: ' + waktu + '\nKeterangan: ' + keterangan);
+
+            // Reset form & tutup modal
+            this.reset();
+            var modal = bootstrap.Modal.getInstance(document.getElementById('modalPemesanan'));
+            modal.hide();
+        });
+    </script>
+
 
 <body>
     <!-- Topbar Start -->
@@ -201,7 +196,7 @@
                 
                 <div class="modal-body">
                     <div class="text-center mb-3">
-                        <img src="img/me.jpg" alt="Foto Profil" class="rounded-circle mb-2" style="width: 64px; height: 64px;">
+                        <img src="/img/me.jpg" alt="Foto Profil" class="rounded-circle mb-2" style="width: 64px; height: 64px;">
                         <h5 class="mb-0">ALFA JAUHARI</h5>
                         <small class="text-muted">user@example.com</small>
                     </div>
@@ -234,7 +229,7 @@
                 <!-- Kiri: Teks -->
                 <div class="col-lg-7 text-center text-lg-start text-white mb-4 mb-lg-0">
                     <h1 class="display-4 fw-bold mb-3 text-light">
-                        <i class="bi bi-building me-2"></i> Home
+                        <i class="bi bi-buildin me-2"></i> Home
                     </h1>
                     <p class="lead mb-2">
                         Selamat datang, <span class="fw-bold">ALFA JAUHARI</span>!
@@ -254,10 +249,6 @@
             </div>
         </div>
     </div>
-    
-    
-
-    
 
     <!-- Ringkasan Penggunaan Ruang -->
     <div class="container my-4">
@@ -314,26 +305,238 @@
 
     <!-- Aksi Cepat -->
     <div class="container my-4">
-        <h5 class="mb-3 fw-semibold">Aksi Cepat</h5>
+        <!-- Modern Section Title -->
+        <div class="d-flex align-items-center mb-3">
+            <span class="bg-primary bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 38px; height: 38px;">
+                <i class="fa fa-bolt text-white"></i>
+            </span>
+            <h5 class="fw-bold mb-0 text-primary">Aksi Cepat</h5>
+        </div>
         <div class="row g-3">
             <div class="col-6 col-md-3">
-                <button class="btn btn-primary w-100 py-3 shadow-sm"><i class="fa fa-plus-circle me-2"></i>Buat Pemesanan</button>
+                <button class="btn btn-primary w-100 py-3 shadow-sm d-flex flex-column align-items-center justify-content-center aksi-btn"
+                    data-bs-toggle="modal" data-bs-target="#modalPemesanan">
+                    <i class="fa fa-plus-circle mb-2 fs-2"></i>
+                    <span class="fw-semibold">Buat Pemesanan</span>
+                </button>
             </div>
+
             <div class="col-6 col-md-3">
-                <button class="btn btn-outline-primary w-100 py-3 shadow-sm"><i class="fa fa-calendar-alt me-2"></i>Lihat Jadwal Saya</button>
+                <button class="btn btn-outline-primary w-100 py-3 shadow-sm d-flex flex-column align-items-center justify-content-center aksi-btn"
+                    data-bs-toggle="modal" data-bs-target="#modalJadwalSaya">
+                    <i class="fa fa-calendar-alt mb-2 fs-2"></i>
+                    <span class="fw-semibold">Lihat Jadwal Saya</span>
+                </button>
             </div>
+
             <div class="col-6 col-md-3">
-                <button class="btn btn-outline-success w-100 py-3 shadow-sm"><i class="fa fa-cogs me-2"></i>Kelola Pemesanan</button>
+                <button class="btn btn-outline-success w-100 py-3 shadow-sm d-flex flex-column align-items-center justify-content-center aksi-btn"
+                    data-bs-toggle="modal" data-bs-target="#modalKelolaPemesanan">
+                    <i class="fa fa-cogs mb-2 fs-2"></i>
+                    <span class="fw-semibold">Kelola Pemesanan</span>
+                </button>
             </div>
+
             <div class="col-6 col-md-3">
-                <button class="btn btn-outline-secondary w-100 py-3 shadow-sm"><i class="fa fa-print me-2"></i>Cetak Bukti</button>
+                <button class="btn btn-outline-secondary w-100 py-3 shadow-sm d-flex flex-column align-items-center justify-content-center aksi-btn"
+                    data-bs-toggle="modal" data-bs-target="#modalCetakBukti">
+                    <i class="fa fa-print mb-2 fs-2"></i>
+                    <span class="fw-semibold">Cetak Bukti</span>
+                </button>
             </div>
+
         </div>
     </div>
+    
+
+<!-- Modal Aksi Cepat -->
+
+    <!-- Modal Buat Pemesanan -->
+<div class="modal fade" id="modalPemesanan" tabindex="-1" aria-labelledby="modalPemesananLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="bg-opacity-primary">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPemesananLabel"><i class="fa fa-plus-circle me-2"></i>Form Pemesanan Ruang</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formPemesanan">
+            <div class="mb-3">
+              <label for="namaPemesan" class="form-label">Nama Pemesan</label>
+              <input type="text" class="form-control" id="namaPemesan" required>
+            </div>
+            <div class="mb-3">
+              <label for="ruangan" class="form-label">Ruangan</label>
+              <select class="form-select" id="ruangan" required>
+                <option selected disabled>Pilih Ruangan</option>
+                <option>Kelas A101</option>
+                <option>Lab Komputer</option>
+                <option>Auditorium</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="tanggal" class="form-label">Tanggal</label>
+              <input type="date" class="form-control" id="tanggal" required>
+            </div>
+            <div class="mb-3">
+              <label for="waktu" class="form-label">Waktu</label>
+              <input type="time" class="form-control" id="waktu" required>
+            </div>
+            <div class="mb-3">
+              <label for="keterangan" class="form-label">Keterangan</label>
+              <textarea class="form-control" id="keterangan" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Kirim Pemesanan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- End Modal Aksi Cepat -->
+
+
+
+<!-- Modal Lihat Jadwal Saya -->
+<div class="modal fade" id="modalJadwalSaya" tabindex="-1" aria-labelledby="modalJadwalSayaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalJadwalSayaLabel">
+            <i class="fa fa-calendar-alt me-2"></i>Jadwal Pemesanan Saya
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Ruangan</th>
+                  <th>Tanggal</th>
+                  <th>Waktu</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kelas A101</td>
+                  <td>12 Mei 2025</td>
+                  <td>09:00 - 11:00</td>
+                  <td><span class="badge bg-success">Dikonfirmasi</span></td>
+                </tr>
+                <tr>
+                  <td>Lab Komputer</td>
+                  <td>15 Mei 2025</td>
+                  <td>13:00 - 15:00</td>
+                  <td><span class="badge bg-warning text-dark">Menunggu</span></td>
+                </tr>
+                <!-- Tambahkan baris lain sesuai kebutuhan -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal Lihat Jadwal saya -->
+
+
+
+  <!-- Modal Kelola Pemesanan -->
+        <div class="modal fade" id="modalKelolaPemesanan" tabindex="-1" aria-labelledby="modalKelolaPemesananLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalKelolaPemesananLabel">
+                    <i class="fa fa-cogs me-2"></i>Kelola Pemesanan
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                        <tr>
+                        <th>Ruangan</th>
+                        <th>Tanggal</th>
+                        <th>Waktu</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Kelas A101</td>
+                        <td>12 Mei 2025</td>
+                        <td>09:00 - 11:00</td>
+                        <td><span class="badge bg-success">Dikonfirmasi</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-danger me-1"><i class="fa fa-times"></i></button>
+                            <button class="btn btn-sm btn-outline-warning"><i class="fa fa-edit"></i></button>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>Lab Komputer</td>
+                        <td>15 Mei 2025</td>
+                        <td>13:00 - 15:00</td>
+                        <td><span class="badge bg-warning text-dark">Menunggu</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-danger me-1"><i class="fa fa-times"></i></button>
+                            <button class="btn btn-sm btn-outline-warning"><i class="fa fa-edit"></i></button>
+                        </td>
+                        </tr>
+                        <!-- Tambahkan baris lain sesuai kebutuhan -->
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+  <!-- End Modal Kelola Pemesanan -->
+
+
+  <!-- Modal Cetak Bukti -->
+    <div class="modal fade" id="modalCetakBukti" tabindex="-1" aria-labelledby="modalCetakBuktiLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="bg-light">
+            <div class="modal-header">
+            <h5 class="modal-title" id="modalCetakBuktiLabel">
+                <i class="fa fa-print me-2"></i>Cetak Bukti Pemesanan
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+            <div class="border rounded p-3 mb-3 bg-ligh text-dark>
+                <h6 class="fw-bold mb-2">Bukti Pemesanan</h6>
+                <p class="mb-1"><strong>Nama:</strong> ALFA JAUHARI</p>
+                <p class="mb-1"><strong>Ruangan:</strong> Kelas A101</p>
+                <p class="mb-1"><strong>Tanggal:</strong> 12 Mei 2025</p>
+                <p class="mb-1"><strong>Waktu:</strong> 09:00 - 11:00</p>
+                <p class="mb-1"><strong>Status:</strong> <span class="badge bg-success">Dikonfirmasi</span></p>
+            </div>
+            <button class="btn btn-primary w-100" onclick="window.print()">
+                <i class="fa fa-print me-2"></i> Cetak Bukti Ini
+            </button>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- end Modal Cetak Bukti  -->
+
+<!-- EndModal Aksi Cepat -->
+
+
 
     <!-- Notifikasi Terbaru -->
     <div class="container my-4">
-        <h5 class="mb-3 fw-semibold">Notifikasi Terbaru</h5>
+
+        <div class="d-flex align-items-center mb-3 px-3 py-1 rounded-3" style="background: linear-gradient(90deg, #0d6efd 60%, #6ea8fe 100%);">
+            <span class="bg-white bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 38px; height: 38px;">
+                <i class="fa fa-solid fa-bell text-primary fs-5"></i>
+            </span>
+            <h5 class="fw-bold mb-0 text-white">Notifikasi Terbaru</h5>
+        </div>
         <ul class="list-group list-group-flush shadow-sm rounded">
             <li class="list-group-item d-flex align-items-center">
                 <span class="badge bg-danger me-2"><i class="fa fa-times-circle"></i></span>
@@ -352,7 +555,14 @@
 
     <!-- Status Pemesanan Terakhir -->
     <div class="container my-4">
-        <h5 class="mb-3 fw-semibold">Status Pemesanan Terakhir</h5>
+
+        <div class="d-flex align-items-center mb-3 px-3 py-1 rounded-3" style="background: linear-gradient(90deg, #0d6efd 60%, #6ea8fe 100%);">
+            <span class="bg-white bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 38px; height: 38px;">
+                <i class="fa fa-solid fa-list text-primary fs-5"></i>
+            </span>
+            <h5 class="fw-bold mb-0 text-white">Status Pemesanan Terakhir</h5>
+        </div>
+
         <div class="table-responsive shadow-sm rounded">
             <table class="table align-middle mb-0">
                 <thead class="table-light">
@@ -387,6 +597,47 @@
         </div>
     </div>
 
+    <!-- Cara Pemesanan Start -->
+<div class="container my-5" id="cara-pesan">
+    <div class="d-flex align-items-center mb-4">
+        <span class="bg-primary bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 38px; height: 38px;">
+            <i class="fa fa-question-circle text-white"></i>
+        </span>
+        <h4 class="fw-bold mb-0 text-primary">Cara Pemesanan Ruangan</h4>
+    </div>
+    <ol class="list-group list-group-numbered mb-4 shadow-sm">
+        <li class="list-group-item">
+            <strong>Login ke Sistem</strong><br>
+            Masuk menggunakan akun kampus Anda.
+        </li>
+        <li class="list-group-item">
+            <strong>Pilih Menu "Buat Pemesanan"</strong><br>
+            Klik tombol <span class="badge bg-primary"><i class="fa fa-plus-circle"></i> Buat Pemesanan</span> pada menu Aksi Cepat.
+        </li>
+        <li class="list-group-item">
+            <strong>Isi Formulir Pemesanan</strong><br>
+            Lengkapi data pemesan, pilih ruangan, tanggal, waktu, dan keterangan kegiatan.
+        </li>
+        <li class="list-group-item">
+            <strong>Kirim Pemesanan</strong><br>
+            Klik tombol <span class="badge bg-success">Kirim Pemesanan</span> untuk mengajukan permintaan.
+        </li>
+        <li class="list-group-item">
+            <strong>Cek Status Pemesanan</strong><br>
+            Lihat status pemesanan Anda di menu <span class="badge bg-info text-dark"><i class="fa fa-calendar-alt"></i> Jadwal Saya</span> atau <span class="badge bg-warning text-dark"><i class="fa fa-cogs"></i> Kelola Pemesanan</span>.
+        </li>
+        <li class="list-group-item">
+            <strong>Cetak Bukti</strong><br>
+            Setelah pemesanan dikonfirmasi, cetak bukti pemesanan melalui menu <span class="badge bg-secondary"><i class="fa fa-print"></i> Cetak Bukti</span>.
+        </li>
+    </ol>
+    <div class="alert alert-info d-flex align-items-center" role="alert">
+        <i class="fa fa-info-circle me-2"></i>
+        Jika mengalami kendala, hubungi admin kampus melalui kontak yang tersedia di halaman ini.
+    </div>
+</div>
+<!-- Cara Pemesanan End -->
+
     <!-- Informasi Umum Sistem -->
     <div class="container">
         <h5 class="">Informasi Umum Sistem</h5>
@@ -416,8 +667,8 @@
                     <h6 class="fw-bold mb-3">Tautan Cepat</h6>
                     <ul class="list-unstyled">
                         <li><a href="about.html" class="text-white-50 text-decoration-none d-block mb-2">Tentang Kami</a></li>
-                        <li><a href="#roomSearch" class="text-white-50 text-decoration-none d-block mb-2">Daftar Ruangan</a></li>
-                        <li><a href="#quot-start" class="text-white-50 text-decoration-none d-block mb-2">Cara Pemesanan</a></li>
+                        <li><a href="daftar-ruang.html" class="text-white-50 text-decoration-none d-block mb-2">Daftar Ruangan</a></li>
+                        <li><a href="" class="text-white-50 text-decoration-none d-block mb-2">Cara Pemesanan</a></li>
                         <li><a href="contact.html" class="text-white-50 text-decoration-none d-block mb-2">Kontak</a></li>
                         <li><a href="contact.html#faq" class="text-white-50 text-decoration-none d-block">FAQ</a></li>
                     </ul>
@@ -466,5 +717,7 @@
         
             <!-- Template Javascript -->
             <script src="js/main.js"></script>
+
+            
 </body>
 </html>
