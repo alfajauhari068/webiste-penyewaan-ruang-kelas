@@ -212,6 +212,53 @@
     });
   </script>
 
+    <!-- Modal Cara Pemesanan -->
+<div class="modal fade" id="modalCaraPesan" tabindex="-1" aria-labelledby="modalCaraPesanLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="modalCaraPesanLabel">
+            <i class="fa fa-question-circle me-2"></i>Cara Pemesanan Ruangan
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <ol class="list-group list-group-numbered mb-4 shadow-sm">
+            <li class="list-group-item">
+              <strong>Login ke Sistem</strong><br>
+              Masuk menggunakan akun kampus Anda.
+            </li>
+            <li class="list-group-item">
+              <strong>Pilih Menu "Buat Pemesanan"</strong><br>
+              Klik tombol <span class="badge bg-primary"><i class="fa fa-plus-circle"></i> Buat Pemesanan</span> pada menu Aksi Cepat.
+            </li>
+            <li class="list-group-item">
+              <strong>Isi Formulir Pemesanan</strong><br>
+              Lengkapi data pemesan, pilih ruangan, tanggal, waktu, dan keterangan kegiatan.
+            </li>
+            <li class="list-group-item">
+              <strong>Kirim Pemesanan</strong><br>
+              Klik tombol <span class="badge bg-success">Kirim Pemesanan</span> untuk mengajukan permintaan.
+            </li>
+            <li class="list-group-item">
+              <strong>Cek Status Pemesanan</strong><br>
+              Lihat status pemesanan Anda di menu <span class="badge bg-info text-dark"><i class="fa fa-calendar-alt"></i> Jadwal Saya</span> atau <span class="badge bg-warning text-dark"><i class="fa fa-cogs"></i> Kelola Pemesanan</span>.
+            </li>
+            <li class="list-group-item">
+              <strong>Cetak Bukti</strong><br>
+              Setelah pemesanan dikonfirmasi, cetak bukti pemesanan melalui menu <span class="badge bg-secondary"><i class="fa fa-print"></i> Cetak Bukti</span>.
+            </li>
+          </ol>
+          <div class="alert alert-info d-flex align-items-center" role="alert">
+            <i class="fa fa-info-circle me-2"></i>
+            Jika mengalami kendala, hubungi admin kampus melalui kontak yang tersedia di halaman ini.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End-modal cara-pesan -->
+
 <!-- Footer Modern -->
 <footer class="bg-gradient-primary text-light pt-5 pb-3 mt-5">
 <div class="container">
@@ -234,7 +281,11 @@
         <ul class="list-unstyled">
             <li><a href="about2.html" class="text-white-50 text-decoration-none d-block mb-2">Tentang Kami</a></li>
             <li><a href="daftar-ruang.html" class="text-white-50 text-decoration-none d-block mb-2">Daftar Ruangan</a></li>
-            <li><a href="#cara-pesan" class="text-white-50 text-decoration-none d-block mb-2">Cara Pemesanan</a></li>
+            <li>
+                <a href="#" class="text-white-50 text-decoration-none d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalCaraPesan">
+                    Cara Pemesanan
+                </a>
+            </li>
             <li><a href="contact2.html" class="text-white-50 text-decoration-none d-block mb-2">Kontak</a></li>
             <li><a href="contact2.html#faq" class="text-white-50 text-decoration-none d-block">FAQ</a></li>
         </ul>
